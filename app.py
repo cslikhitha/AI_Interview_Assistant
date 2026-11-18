@@ -14,3 +14,5 @@ if role == "other":
 model = st.selectbox("Model",['openai/gpt-oss-120b','openai/gpt-oss-20b'])
 level = st.selectbox("Level",['Beginner','Intermediate','Advance'])
 mode = st.radio("Activity",['Generate questions','Generate Coding Questions','Evaluate Answer','Improve Answer'])
+if mode = 'Generate Questions':
+   count = st.slider(1,10,5)

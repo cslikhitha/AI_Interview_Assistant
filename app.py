@@ -17,4 +17,4 @@ mode = st.radio("Activity",['Generate questions','Generate Coding Questions','Ev
 if mode = 'Generate Questions':
    count = st.slider("Number of Questions",1,10,5)
 elif mode = 'Generate Code Questions':
-   topic = st.selectbox("Topics",['SQL','AIML,'Python','DSA','C++/C','JAVA','ADA','DBMS'])
+   topic = st.selectbox("topic",['SQL','AIML,'Python','DSA','C++/C','JAVA','ADA','DBMS'])

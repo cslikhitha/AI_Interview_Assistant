@@ -24,7 +24,7 @@ else:
   question = st.text_area('Enter Interview Quesion here')
   answer = st.text_area('Enter your answer', height =160)
 if st.button("Generate AI Responce", type = "primary"):
-  if mode in ['Evaluate Answer', 'Improve Answer'] and (not question.strip()) or (not answer.strip()):
+  if mode in ['Evaluate Answer', 'Improve Answer'] and (not question.strip() or not answer.strip()):
     st.warning("Please enter a valid Question and Answer")
     st.stop()
   topic = "Topics is" + topic + "Difficulty is" + level
@@ -41,8 +41,7 @@ with st.spinner("Generate your answer ..."):
   try:
     responce = client.chat.completions.create(
       model = gen_model,
-      messages = [{"role:"system", 
-                   "content":"Act as a Senior Interviewer both HR and Technical export"},
+      messages = [{"role:"system", "content":"Act as a Senior Interviewer both HR and Technical export"},
                   {"role" : "user",
                   "content" : background + task }],
       temperature = 0.7,

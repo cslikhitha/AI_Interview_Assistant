@@ -48,10 +48,10 @@ with st.spinner("Generate your answer ..."):
       temperature = 0.7,
       max_tokens = 1800 )
     output = responce.choices[0].message.content
-      st.subheader("AI Responce")
-      st.markdown(output)
-      st.download_button("Download Responce", output,file_name = "Interview_Assistant.txt", mime ='text/plain')
- except Exception as e:
+    st.subheader("AI Responce")
+    st.markdown(output)
+    st.download_button("Download Responce", output,file_name = "Interview_Assistant.txt", mime ='text/plain')
+  except Exception as e:
     st.error ("API connection was unsuccessful",e)
     st.info ("Please check your API key and rate limits")
 st.caption("Powered by Streamlit.io and GitHub. Using LLM API")

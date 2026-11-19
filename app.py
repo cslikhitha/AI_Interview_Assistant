@@ -47,7 +47,7 @@ with st.spinner("Generate your answer ..."):
                   "content" : background + task }],
       temperature = 0.7,
       max_tokens = 1800 )
-      output = responce.choices[0].message.content
+    output = responce.choices[0].message.content
       st.subheader("AI Responce")
       st.markdown(output)
       st.download_button("Download Responce", output,file_name = "Interview_Assistant.txt", mime ='text/plain')

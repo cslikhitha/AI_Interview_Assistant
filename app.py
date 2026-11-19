@@ -40,7 +40,7 @@ background = "Job role : " +role+ " Difficulti level "+level
 with st.spinner("Generating your answer ..."):
   try:
     responce = client.chat.completions.create(
-      model = gen_model,
+        model = gen_model,
       messages = [{"role": "system",
                   "content":"Act as a Senior Interviewer both HR and Technical expert"},
                   {"role" : "user",

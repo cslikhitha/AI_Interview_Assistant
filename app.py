@@ -37,7 +37,7 @@ elif mode == "Evaluate Answer":
 elif mode == "Improve Answer":
   task = "Questions : " + question + "My Answer :" +answer + "Improve the answer based on coding , communicatoin ,aplitute,preparation interview"
 background = "Job role : " +role+ " Difficulti level "+level
-with st.spinner("Generate your answer ..."):
+with st.spinner("Generating your answer ..."):
   try:
     responce = client.chat.completions.create(
       model = gen_model,
@@ -52,7 +52,7 @@ with st.spinner("Generate your answer ..."):
     st.markdown(output)
     st.download_button("Download Responce", output,file_name = "Interview_Assistant.txt", mime ='text/plain')
   except Exception as e:
-    st.error ("API connection was unsuccessful",e)
+    st.error ("API connection was unsuccessful :", e)
     st.info ("Please check your API key and rate limits")
 st.caption("Powered by Streamlit.io and GitHub. Using LLM API")
     

@@ -27,4 +27,12 @@ if st.button("Generate AI Responce", type = "primary"):
   if mode in ['Evaluate Answer', 'Improve Answer'] and (not question.strip()) or (not answer.strip()):
     st.warning("Please enter a valid Question and Answer")
     st.stop()
-    
+  topics = "Topics is" + topic + "Difficulty is" + level
+if mode == "Generate Questions":
+  task = "Generate " + str(count) + "Frequently asked Interview Questions 3 theory and 2 conceptual .Do not give answer give hint"
+elif mode == "Generate Code Questions":
+  task = "Generate " + str(count) + "Frequently asked coding questions on topic " + topic + "and give hints to solve them also add be accuarate "
+elif mode == "Evaluate Answer":
+  task = "Questions : " + question + "My Answer :" + answer + "Evaluate this answer based on concepts , relevence , communication length of amswer.Give each rating out of 5"
+elif mode == "Improve Answer":
+  task = "Questions : " + question + "My Answer :" +answer + "Improve the answer based on coding , communicatoin ,aplitute,preparation interview"
